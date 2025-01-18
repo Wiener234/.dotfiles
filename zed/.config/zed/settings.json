@@ -1,0 +1,69 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "base_keymap": "VSCode",
+  "vim_mode": true,
+  "features": {
+    "inline_completion_provider": "supermaven"
+  },
+  "telemetry": {
+    "metrics": false,
+    "diagnostics": false
+  },
+  "lsp": {
+    "tinymist": {
+      "initialization_options": {
+        "exportPdf": "onSave",
+        "outputPath": "$root/$name",
+        "formaterOptions": "typstyle"
+        // "typstExtraArgs": ["--", "main.typ"]
+      }
+    }
+  },
+  "ssh_connections": [
+    {
+      "host": "kpp",
+      "projects": [
+        {
+          "paths": ["~/Cuda_NN"]
+        },
+        {
+          "paths": ["~/matmulcuda"]
+        }
+      ]
+    },
+    {
+      "host": "server",
+      "projects": [
+        {
+          "paths": ["~/Documents"]
+        },
+        {
+          "paths": ["~/Documents/aoc22"]
+        },
+        {
+          "paths": ["~/blog"]
+        },
+        {
+          "paths": ["~/github/blog"]
+        },
+        {
+          "paths": ["~/website"]
+        }
+      ]
+    }
+  ],
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "Catppuccin Frappé"
+  }
+}
