@@ -1,8 +1,0 @@
-node_modules
-/bindings
-/Cargo.toml
-/Cargo.lock
-/binding.gyp
-/package-lock.json
-/src/grammar.json
-/src/node-types.json

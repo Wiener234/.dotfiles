@@ -125,3 +125,4 @@ export PATH=$HOME/.local/bin:$PATH
 source $HOME/.bash_completion_zellij
 source <(COMPLETE=bash jj)
 export EDITOR=hx
+export HELIX_RUNTIME=$HOME/Documents/helix-personal/runtime

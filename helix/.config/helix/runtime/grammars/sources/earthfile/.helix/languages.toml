@@ -1,4 +1,0 @@
-[[language]]
-name = "javascript"
-auto-format = true
-formatter = { command = "npx", args = ["biome", "format", "--stdin-file-path=grammar.js"] }

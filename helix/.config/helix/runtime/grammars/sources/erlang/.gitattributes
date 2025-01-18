@@ -1,3 +1,0 @@
-/src/**/* linguist-generated=true -diff
-# Exclude test files from language stats
-/test/**/*.erl linguist-documentation=true

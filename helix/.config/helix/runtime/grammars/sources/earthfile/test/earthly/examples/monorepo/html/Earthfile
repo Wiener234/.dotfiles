@@ -1,8 +1,0 @@
-VERSION 0.8
-FROM alpine:3.18
-
-WORKDIR /example-static
-
-html:
-  COPY index.html ./
-  SAVE ARTIFACT index.html

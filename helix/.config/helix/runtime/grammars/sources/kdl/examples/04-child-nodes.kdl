@@ -1,6 +1,0 @@
-contents {
-  section "First section" {
-    paragraph "This is the first paragraph"
-    paragraph "This is the second paragraph"
-  }
-}

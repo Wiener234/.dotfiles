@@ -1,7 +1,0 @@
-Cargo.lock
-node_modules
-build
-*.log
-/target/
-*.wasm
-.DS_Store

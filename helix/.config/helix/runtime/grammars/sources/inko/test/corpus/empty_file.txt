@@ -1,7 +1,0 @@
-===
-Empty files
-===
-
----
-
-(source_file)

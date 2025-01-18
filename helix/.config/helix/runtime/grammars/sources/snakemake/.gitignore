@@ -1,6 +1,0 @@
-node_modules
-bindings
-binding.gyp
-Cargo.toml
-build
-log*
