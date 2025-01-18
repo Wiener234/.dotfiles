@@ -1,0 +1,84 @@
+===
+Indented normal string: empty
+===
+
+a := """"""
+
+---
+
+(file
+  (assignment
+    (identifier)
+    (expression
+      (value
+        (string)))))
+
+===
+Indented normal string: with basic content
+===
+
+a := """normal string 🦀"""
+
+---
+
+(file
+  (assignment
+    (identifier)
+    (expression
+      (value
+        (string)))))
+
+===
+Indented normal string: with line breaks
+===
+
+a := """
+  a line break
+  or more"""
+
+---
+
+(file
+  (assignment
+    (identifier)
+    (expression
+      (value
+        (string)))))
+
+===
+Indented normal string: with " inside
+===
+
+a := """
+  a line "break"
+  or more"""
+
+---
+
+(file
+  (assignment
+    (identifier)
+    (expression
+      (value
+        (string)))))
+
+===
+Indented normal string: with escape sequences
+===
+
+a := """normal \t \n \r \\ \" \u{a1F} string"""
+
+---
+
+(file
+  (assignment
+    (identifier)
+    (expression
+      (value
+        (string
+          (escape_sequence)
+          (escape_sequence)
+          (escape_sequence)
+          (escape_sequence)
+          (escape_sequence)
+          (escape_sequence))))))

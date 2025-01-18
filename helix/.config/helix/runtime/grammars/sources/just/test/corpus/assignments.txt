@@ -1,0 +1,295 @@
+===
+Assignement: value
+===
+
+a := "a"
+
+a := b
+
+a := os()
+
+a := `echo toto`
+
+---
+
+(file
+  (assignment
+    (identifier)
+    (expression
+      (value
+        (string))))
+  (assignment
+    (identifier)
+    (expression
+      (value
+        (identifier))))
+  (assignment
+    (identifier)
+    (expression
+      (value
+        (function_call
+          (identifier)))))
+  (assignment
+    (identifier)
+    (expression
+      (value
+        (external_command
+          (content))))))
+
+===
+Assignement: Slash join
+===
+
+a := os() / arch()
+
+---
+
+(file
+  (assignment
+    (identifier)
+    (expression
+      (value
+        (function_call
+          (identifier)))
+      (expression
+        (value
+          (function_call
+            (identifier)))))))
+
+===
+Assignement: Plus join
+===
+
+a := os() + arch()
+
+---
+
+(file
+  (assignment
+    (identifier)
+    (expression
+      (value
+        (function_call
+          (identifier)))
+      (expression
+        (value
+          (function_call
+            (identifier)))))))
+
+===
+Assignement: assert
+===
+
+a := assert(os() != arch(), "is ok")
+
+---
+
+(file
+  (assignment
+    (identifier)
+    (expression
+      (assert_parameters
+        (condition
+          (expression
+            (value
+              (function_call
+                (identifier))))
+          (expression
+            (value
+              (function_call
+                (identifier)))))
+        (expression
+          (value
+            (string)))))))
+
+===
+Assignement: if-else
+===
+
+a := if a == b { c } else { d }
+
+---
+
+(file
+  (assignment
+    (identifier)
+    (expression
+      (condition
+        (expression
+          (value
+            (identifier)))
+        (expression
+          (value
+            (identifier))))
+      (expression
+        (value
+          (identifier)))
+      (expression
+        (value
+          (identifier))))))
+
+===
+Assignement: with attribute
+===
+
+[private]
+a := "some value"
+
+---
+
+(file
+  (assignment
+    (attribute
+      (identifier))
+    (identifier)
+    (expression
+      (value
+        (string)))))
+
+===
+Exported assignement: value
+===
+
+export a := "a"
+
+export a := b
+
+export a := os()
+
+export a := `echo toto`
+
+---
+
+(file
+  (assignment
+    (identifier)
+    (expression
+      (value
+        (string))))
+  (assignment
+    (identifier)
+    (expression
+      (value
+        (identifier))))
+  (assignment
+    (identifier)
+    (expression
+      (value
+        (function_call
+          (identifier)))))
+  (assignment
+    (identifier)
+    (expression
+      (value
+        (external_command
+          (content))))))
+
+===
+Exported assignement: Slash join
+===
+
+export a := os() / arch()
+
+---
+
+(file
+  (assignment
+    (identifier)
+    (expression
+      (value
+        (function_call
+          (identifier)))
+      (expression
+        (value
+          (function_call
+            (identifier)))))))
+
+===
+Exported assignement: Plus join
+===
+
+export a := os() + arch()
+
+---
+
+(file
+  (assignment
+    (identifier)
+    (expression
+      (value
+        (function_call
+          (identifier)))
+      (expression
+        (value
+          (function_call
+            (identifier)))))))
+
+===
+Exported assignement: assert
+===
+
+export a := assert(os() != arch(), "is ok")
+
+---
+
+(file
+  (assignment
+    (identifier)
+    (expression
+      (assert_parameters
+        (condition
+          (expression
+            (value
+              (function_call
+                (identifier))))
+          (expression
+            (value
+              (function_call
+                (identifier)))))
+        (expression
+          (value
+            (string)))))))
+
+===
+Exported assignement: if-else
+===
+
+export a := if a == b { c } else { d }
+
+---
+
+(file
+  (assignment
+    (identifier)
+    (expression
+      (condition
+        (expression
+          (value
+            (identifier)))
+        (expression
+          (value
+            (identifier))))
+      (expression
+        (value
+          (identifier)))
+      (expression
+        (value
+          (identifier))))))
+
+===
+Exported assignement: with attribute
+===
+
+[private]
+export a := "some value"
+
+---
+
+(file
+  (assignment
+    (attribute
+      (identifier))
+    (identifier)
+    (expression
+      (value
+        (string)))))

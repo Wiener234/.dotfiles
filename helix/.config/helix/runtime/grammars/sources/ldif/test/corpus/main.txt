@@ -1,0 +1,110 @@
+================================================================================
+Comment
+================================================================================
+# Comments is nice
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (comment)
+ )
+
+
+================================================================================
+Modify
+================================================================================
+dn: CN=Jane Smith,OU=Accounting,DC=example,DC=com
+changetype: modify
+replace: employeeID
+employeeID: 5678
+-
+replace: employeeNumber
+employeeNumber: 76543
+-
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (ldif_change_record
+    (dn_spec
+      (distinguishedName
+        (name
+          (name_componet
+            (attributeTypeAndValue
+              (attributeType)
+              (string)))
+          (name_componet
+            (attributeTypeAndValue
+              (attributeType)
+              (string)))
+          (name_componet
+            (attributeTypeAndValue
+              (attributeType)
+              (string)))
+          (name_componet
+            (attributeTypeAndValue
+              (attributeType)
+              (string)))))
+      )
+    (changerecord
+      (change_modify
+        (mod_spec
+          (AttributeDescription
+            (attributeType))
+          (attrval_spec
+            (AttributeDescription
+              (attributeType))
+            (value_spec)))
+        (mod_spec
+          (AttributeDescription
+            (attributeType))
+          (attrval_spec
+            (AttributeDescription
+              (attributeType))
+            (value_spec)))))
+    )
+  )
+
+
+================================================================================
+Modify with escape part \,
+================================================================================
+dn: CN=Jane\, Smith, OU=Accounting, DC=example, DC=com
+changetype: modify
+replace: employeeNumber
+employeeNumber: 76543
+-
+
+--------------------------------------------------------------------------------
+(source_file
+  (ldif_change_record
+    (dn_spec
+      (distinguishedName
+        (name
+          (name_componet
+            (attributeTypeAndValue
+              (attributeType)
+              (string
+                (pair
+                  ))))
+          (name_componet
+            (attributeTypeAndValue
+              (attributeType)
+              (string)))
+          (name_componet
+            (attributeTypeAndValue
+              (attributeType)
+              (string)))
+          (name_componet
+            (attributeTypeAndValue
+              (attributeType)
+              (string))))))
+    (changerecord
+      (change_modify
+        (mod_spec
+          (AttributeDescription
+            (attributeType))
+          (attrval_spec
+            (AttributeDescription
+              (attributeType))
+            (value_spec)))))))

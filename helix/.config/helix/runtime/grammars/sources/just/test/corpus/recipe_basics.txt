@@ -1,0 +1,144 @@
+===
+Recipes: quiet or not
+===
+
+@r:
+
+r:
+
+---
+
+(file
+  (recipe
+    (identifier))
+  (recipe
+    (identifier)))
+
+===
+Recipes: everything at once
+===
+
+[an_attr, or_two("with param"), prompt("a builtin attr")]
+[another_attr]
+[another_attr("with param")]
+[linux]
+[group("grouped recipe")]
+@quiet_recipe a $b c=value $d="value" *variadic_param="some default value": d1 (d2 "abc" os() + arch()) && (d3 "42" os()) d4
+  #!/usr/bin/env bash -c command {{ with + interpolation() }}
+  @-echo line 1
+  -@echo line 2
+  @echo line 42
+  -echo line with a dash
+  echo {{ a }} with more {{ inter / polation + if os() == toto() { a } else { b } }} content
+
+
+---
+
+(file
+  (recipe
+    (attribute
+      (identifier))
+    (attribute
+      (identifier)
+      (string))
+    (attribute
+      (identifier)
+      (string))
+    (attribute
+      (identifier))
+    (attribute
+      (identifier)
+      (string))
+    (attribute
+      (identifier))
+    (attribute
+      (identifier)
+      (string))
+    (identifier)
+    (recipe_parameters
+      (recipe_parameter
+        (identifier))
+      (recipe_parameter
+        (identifier))
+      (recipe_parameter
+        (identifier)
+        (value
+          (identifier)))
+      (recipe_parameter
+        (identifier)
+        (value
+          (string)))
+      (variadic_parameter
+        (recipe_parameter
+          (identifier)
+          (value
+            (string)))))
+    (recipe_dependency
+      (identifier))
+    (recipe_dependency
+      (identifier)
+      (expression
+        (value
+          (string)))
+      (expression
+        (value
+          (function_call
+            (identifier)))
+        (expression
+          (value
+            (function_call
+              (identifier))))))
+    (recipe_dependency
+      (identifier)
+      (expression
+        (value
+          (string)))
+      (expression
+        (value
+          (function_call
+            (identifier)))))
+    (recipe_dependency
+      (identifier))
+    (recipe_body
+      (shebang_line
+        (shebang_shell)
+        (interpolation
+          (expression
+            (value
+              (identifier))
+            (expression
+              (value
+                (function_call
+                  (identifier)))))))
+      (recipe_line)
+      (recipe_line)
+      (recipe_line)
+      (recipe_line)
+      (recipe_line
+        (interpolation
+          (expression
+            (value
+              (identifier))))
+        (interpolation
+          (expression
+            (value
+              (identifier))
+            (expression
+              (value
+                (identifier))
+              (expression
+                (condition
+                  (expression
+                    (value
+                      (function_call
+                        (identifier))))
+                  (expression
+                    (value
+                      (function_call
+                        (identifier)))))
+                (expression
+                  (value
+                    (identifier)))
+                (expression
+                  (value
+                    (identifier)))))))))))

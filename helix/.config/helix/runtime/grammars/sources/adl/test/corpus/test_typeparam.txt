@@ -1,0 +1,59 @@
+================================================================================
+Test Type Params
+================================================================================
+module test2
+{
+
+struct S2<C> {
+    AAA f0;
+    BBB<A> f1;
+    XXX<A<B<C>>> f2;
+    YYY<A,B<C>> f3;
+};
+
+
+};
+
+--------------------------------------------------------------------------------
+
+(adl
+    (scoped_name)
+    (struct
+    (name)
+    (type_param)
+    (field
+        (type_expr
+        (scoped_name))
+        (fname))
+    (field
+        (type_expr
+        (scoped_name)
+        (type_expr_params
+            (param
+            (scoped_name))))
+        (fname))
+    (field
+        (type_expr
+        (scoped_name)
+        (type_expr_params
+            (param
+            (scoped_name)
+            (type_expr_params
+                (param
+                (scoped_name)
+                (type_expr_params
+                    (param
+                    (scoped_name))))))))
+          (fname))
+        (field
+          (type_expr
+            (scoped_name)
+            (type_expr_params
+              (param
+                (scoped_name))
+              (param
+                (scoped_name)
+                (type_expr_params
+                  (param
+                    (scoped_name))))))
+            (fname))))

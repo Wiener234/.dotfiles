@@ -1,0 +1,7 @@
+# Copied from https://github.com/siraben/tree-sitter-imp/blob/master/.gitignore
+.DS_Store
+build
+node_modules
+Cargo.lock
+package-lock.json
+.log

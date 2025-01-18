@@ -1,0 +1,17 @@
+[[language]]
+name = "c"
+auto-format = true
+formatter = { command = "clang-format", args = [] }
+
+[[language]]
+name = "javascript"
+formatter = { command = "prettier", args = ["--parser", "typescript"] }
+auto-format = true
+
+[[language]]
+name = "text"
+scope = "source.text"
+injection-regex = "text"
+file-types = ["txt"]
+roots = []
+indent = { tab-width = 2, unit = "  " }

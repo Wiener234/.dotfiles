@@ -1,0 +1,123 @@
+===
+Expression: Parentheses
+===
+
+a := ( identifier )
+
+a := ( `backtick` )
+
+a := ( ```indented backtick``` )
+
+a := ( 'raw string' )
+
+a := ( '''indented raw string''' )
+
+a := ( "normal string" )
+
+a := ( """indented normal string""" )
+
+a := ( arch() )
+
+a := ( shell(`python3 --help`) )
+
+a := (
+  function_call(
+    "some",
+    params,
+    'here',
+  )
+)
+
+---
+
+(file
+  (assignment
+    (identifier)
+    (expression
+      (value
+        (expression
+          (value
+            (identifier))))))
+  (assignment
+    (identifier)
+    (expression
+      (value
+        (expression
+          (value
+            (external_command
+              (content)))))))
+  (assignment
+    (identifier)
+    (expression
+      (value
+        (expression
+          (value
+            (external_command
+              (content)))))))
+  (assignment
+    (identifier)
+    (expression
+      (value
+        (expression
+          (value
+            (string))))))
+  (assignment
+    (identifier)
+    (expression
+      (value
+        (expression
+          (value
+            (string))))))
+  (assignment
+    (identifier)
+    (expression
+      (value
+        (expression
+          (value
+            (string))))))
+  (assignment
+    (identifier)
+    (expression
+      (value
+        (expression
+          (value
+            (string))))))
+  (assignment
+    (identifier)
+    (expression
+      (value
+        (expression
+          (value
+            (function_call
+              (identifier)))))))
+  (assignment
+    (identifier)
+    (expression
+      (value
+        (expression
+          (value
+            (function_call
+              (identifier)
+              (function_parameters
+                (expression
+                  (value
+                    (external_command
+                      (content)))))))))))
+  (assignment
+    (identifier)
+    (expression
+      (value
+        (expression
+          (value
+            (function_call
+              (identifier)
+              (function_parameters
+                (expression
+                  (value
+                    (string)))
+                (expression
+                  (value
+                    (identifier)))
+                (expression
+                  (value
+                    (string)))))))))))

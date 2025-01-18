@@ -1,0 +1,28 @@
+
+[[language]]
+auto-format = true
+name = "rust"
+
+[[language]]
+auto-format = true
+name = "nix"
+
+[language.formatter]
+command = "nixpkgs-fmt"
+
+[[language]]
+language-servers = ["ltex-ls", "marksman"]
+name = "markdown"
+text-width = 80
+
+[language.soft-wrap]
+enable = true
+
+
+[language-server.tinymist]
+command = "tinymist"
+config = { exportPdf = "onType", outputPath = "$root/target/$dir/$name" }
+
+[[language]]
+name = "typst"
+language-servers = ["tinymist"]

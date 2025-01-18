@@ -1,0 +1,3 @@
+/flake.lock -diff
+
+/bindings/** linguist-generated=true

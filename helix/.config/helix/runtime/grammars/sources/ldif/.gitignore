@@ -1,0 +1,13 @@
+node_modules/
+package-lock.json
+yarn.lock
+Cargo.lock
+
+build/
+target/
+
+# ignore file types
+*.wasm
+*.exp
+*.lib
+*.obj
