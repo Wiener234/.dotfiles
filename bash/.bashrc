@@ -126,3 +126,5 @@ source $HOME/.bash_completion_zellij
 source <(COMPLETE=bash jj)
 export EDITOR=hx
 export HELIX_RUNTIME=$HOME/Documents/helix-personal/runtime
+eval "$(starship init bash)"
+eval "$(zoxide init bash)"
