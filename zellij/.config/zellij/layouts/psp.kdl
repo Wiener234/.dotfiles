@@ -1,0 +1,24 @@
+layout {
+    tab name="edit" focus=true {
+        pane size="80%" {
+        }
+        pane size="20%" split_direction="vertical" {
+            pane command="pspsh" size="50%" {
+                start_suspended false
+            }
+            pane size="50%"
+        }
+        pane size=1 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+    tab name="psplink" hide_floating_panes=true {
+        pane command="usbhostfs_pc" {
+            start_suspended false
+        }
+        pane size=1 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+}
+

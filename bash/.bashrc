@@ -129,3 +129,6 @@ export HELIX_RUNTIME=$HOME/Documents/helix-personal/runtime
 eval "$(starship init bash)"
 eval "$(zoxide init bash)"
 export PATH="$HOME/Downloads/zig:$PATH"
+
+export PSPDEV="$HOME/pspdev"
+export PATH="$PATH:$PSPDEV/bin"
