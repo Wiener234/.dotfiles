@@ -18,11 +18,17 @@ text-width = 80
 [language.soft-wrap]
 enable = true
 
+[language-server.ltexplus]
+command = "$HOME/Downloads/ltex-ls-plus-18.4.0/bin/ltex-ls-plus"
 
 [language-server.tinymist]
 command = "tinymist"
 config = { exportPdf = "onType", outputPath = "$root/target/$dir/$name" }
 
+[language-server.typstspell]
+command = "typst-languagetool-lsp"
+config = {backend = "bundle", main = "main.typ", languages = {de = "de-DE", en = "en-US"}, on_change = "200ms"}
+
 [[language]]
 name = "typst"
-language-servers = ["tinymist"]
+language-servers = ["tinymist", "typstspell"]

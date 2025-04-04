@@ -31,10 +31,14 @@
       "host": "kpp",
       "projects": [
         {
-          "paths": ["~/Cuda_NN"]
+          "paths": [
+            "~/Cuda_NN"
+          ]
         },
         {
-          "paths": ["~/matmulcuda"]
+          "paths": [
+            "~/matmulcuda"
+          ]
         }
       ]
     },
@@ -42,21 +46,39 @@
       "host": "server",
       "projects": [
         {
-          "paths": ["~/Documents"]
+          "paths": [
+            "~/Documents"
+          ]
         },
         {
-          "paths": ["~/Documents/aoc22"]
+          "paths": [
+            "~/Documents/aoc22"
+          ]
         },
         {
-          "paths": ["~/blog"]
+          "paths": [
+            "~/blog"
+          ]
         },
         {
-          "paths": ["~/github/blog"]
+          "paths": [
+            "~/github/blog"
+          ]
         },
         {
-          "paths": ["~/website"]
+          "paths": [
+            "~/website"
+          ]
         }
       ]
+    },
+    {
+      "host": "server",
+      "projects": []
+    },
+    {
+      "host": "server",
+      "projects": []
     }
   ],
   "ui_font_size": 16,
