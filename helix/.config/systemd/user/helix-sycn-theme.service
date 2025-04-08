@@ -1,0 +1,13 @@
+[Unit]
+Description=Helix System Colour Scheme Synchronisation Service
+After=graphical-session.target
+
+[Service]
+Type=simple
+RestartSec=5
+Restart=always
+ExecStart=%h/.config/helix/scripts/monitor.sh
+
+[Install]
+WantedBy=graphical-session.target
+
