@@ -1,0 +1,10 @@
+/* .urlbarView-row { */
+  /* &[selected] { */
+    /* background-color: var(--urlbarView-highlight-background); */
+    /* color: var(--toolbar-field-focus-color); */
+  /* } */
+/* } */
+
+*{
+  --urlbarView-highlight-color: var(--toolbar-field-focus-color) !important;
+}
