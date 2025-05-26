@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # === CONFIGURATION ===
-LATITUDE=53.349552N       # Replace with your latitude
-LONGITUDE=-14.061151E     # Replace with your longitude
+LATITUDE=52.52437N       # Replace with your latitude
+LONGITUDE=13.41053E     # Replace with your longitude
 light="echo false > $HOME/.config/cosmic/com.system76.CosmicTheme.Mode/v1/is_dark"  # Replace with your desired command
 dark="echo true > $HOME/.config/cosmic/com.system76.CosmicTheme.Mode/v1/is_dark"
 
