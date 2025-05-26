@@ -1,0 +1,14 @@
+[Unit]
+Description=Run a user script at sunrise and sunset
+After=network.target
+
+[Service]
+ExecStart=%h/.dotfiles/change_theme.sh
+Restart=always
+RestartSec=10
+StandardOutput=append:%h/.local/share/sunrise_sunset.log
+StandardError=append:%h/.local/share/sunrise_sunset.err
+
+[Install]
+WantedBy=default.target
+
