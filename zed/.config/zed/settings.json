@@ -7,85 +7,42 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "ssh_connections": [
+    {
+      "host": "server",
+      "projects": [
+        {
+          "paths": [
+            "/home/nils"
+          ]
+        },
+        {
+          "paths": [
+            "/home/nils/discord_bots"
+          ]
+        }
+      ]
+    }
+  ],
+  "tab_bar": {
+    "show": true
+  },
+  "always_treat_brackets_as_autoclosed": true,
   "base_keymap": "VSCode",
   "vim_mode": true,
-  "features": {
-    "inline_completion_provider": "supermaven"
-  },
   "telemetry": {
     "metrics": false,
     "diagnostics": false
   },
-  "lsp": {
-    "tinymist": {
-      "initialization_options": {
-        "exportPdf": "onSave",
-        "outputPath": "$root/$name",
-        "formaterOptions": "typstyle"
-        // "typstExtraArgs": ["--", "main.typ"]
-      }
-    }
-  },
-  "ssh_connections": [
-    {
-      "host": "kpp",
-      "projects": [
-        {
-          "paths": [
-            "~/Cuda_NN"
-          ]
-        },
-        {
-          "paths": [
-            "~/matmulcuda"
-          ]
-        }
-      ]
-    },
-    {
-      "host": "server",
-      "projects": [
-        {
-          "paths": [
-            "~/Documents"
-          ]
-        },
-        {
-          "paths": [
-            "~/Documents/aoc22"
-          ]
-        },
-        {
-          "paths": [
-            "~/blog"
-          ]
-        },
-        {
-          "paths": [
-            "~/github/blog"
-          ]
-        },
-        {
-          "paths": [
-            "~/website"
-          ]
-        }
-      ]
-    },
-    {
-      "host": "server",
-      "projects": []
-    },
-    {
-      "host": "server",
-      "projects": []
-    }
-  ],
+  "relative_line_numbers": true,
   "ui_font_size": 16,
   "buffer_font_size": 16,
   "theme": {
     "mode": "system",
-    "light": "One Light",
-    "dark": "Catppuccin Frappé"
+    "light": "Catppuccin Latte",
+    "dark": "One Dark"
+  },
+  "vim": {
+    "default_mode": "helix_normal"
   }
 }
