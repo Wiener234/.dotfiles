@@ -13,5 +13,8 @@ render = true
 display-messages = true
 
 [keys.normal."+"]
-s = ":sh git status"
-l = ":sh git log --graph --abbrev-commit --format='%C(blue)%h%C(reset) %C(yellow)%d%C(reset) %s - %C(green)(%cr)[%an]%C(reset)'"
+# s = ":sh git status"
+# l = ":sh git log --graph --abbrev-commit --format='%C(blue)%h%C(reset) %C(yellow)%d%C(reset) %s - %C(green)(%cr)[%an]%C(reset)'"
+s = ":sh kitten @ new-window --cwd $PWD"
+# j = ":sh kitten @ next-window"
+t = ":sh typst watch --root $PWD main.typ target/main.pdf --open"

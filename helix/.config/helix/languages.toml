@@ -29,6 +29,11 @@ config = { exportPdf = "onType", outputPath = "$root/target/$dir/$name" }
 command = "typst-languagetool-lsp"
 config = {backend = "bundle", main = "main.typ", languages = {de = "de-DE", en = "en-US"}, on_change = "200ms"}
 
+[language-server.codebook]
+command = "codebook-lsp"
+args = ["serve"]
+
+
 [[language]]
 name = "typst"
-language-servers = ["tinymist", "typstspell"]
+language-servers = ["tinymist", "codebook"]
