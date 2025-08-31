@@ -13,6 +13,12 @@
     }
   },
   {
+    "context": "Editor",
+    "bindings": {
+      "escape": "vim::HelixNormalAfter"
+    }
+  },
+  {
     "context": "Editor && showing_completions",
     "bindings": {
       "ctrl-shift-alt-escape": "vim::HelixNormalAfter",
@@ -24,9 +30,32 @@
     }
   },
   {
-    "context": "Editor && !showing_completions",
+    "context": "Editor && !showing_completions && vim_mode != insert",
     "bindings": {
-      "escape": "vim::HelixNormalAfter"
+      "escape": "vim::HelixNormalAfter",
+      "# a v": "vim::SwitchToNormalMode",
+      "# c s": "vim::PushChangeSurrounds",
+      "# d s": "vim::PushDeleteSurrounds",
+      "# y s": "vim::PushAddSurrounds",
+      "m r": ["workspace::SendKeystrokes", "# a v # c s"],
+      "m d": ["workspace::SendKeystrokes", "# a v # d s"],
+      "m s": ["workspace::SendKeystrokes", "b e v # y s"],
+      "space t": "terminal_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "!Editor && !Terminal",
+    "bindings": {
+      "space f": "file_finder::Toggle",
+      "space t": "terminal_panel::ToggleFocus",
+      ":": "command_palette::Toggle"
+    }
+  },
+  {
+    "context": "!Editor && Terminal",
+    "bindings": {
+      "space f": "file_finder::Toggle",
+      "space t": "workspace::ToggleBottomDock"
     }
   }
 ]

@@ -7,19 +7,22 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "disable_ai": true,
+  "agent": {
+    "single_file_review": false
+  },
   "ssh_connections": [
     {
       "host": "server",
       "projects": [
         {
-          "paths": [
-            "/home/nils"
-          ]
+          "paths": ["/home/nils"]
         },
         {
-          "paths": [
-            "/home/nils/discord_bots"
-          ]
+          "paths": ["/home/nils/discord_bots"]
+        },
+        {
+          "paths": ["/home/nils/typst"]
         }
       ]
     }
@@ -44,5 +47,23 @@
   },
   "vim": {
     "default_mode": "helix_normal"
+  },
+  "lsp": {
+    "tinymist": {
+      "initialization_options": {
+        "exportPdf": "onSave",
+        "outputPath": "$root/target/$dir/$name",
+        "preview": {
+          "background": { "enabled": true }
+          // "preview": {
+          //   "background.args": [
+          //     "--data-plane-host=127.0.0.1:23635",
+          //     "--invert-colors=auto",
+          //     "--open"
+          //   ]
+          // }
+        }
+      }
+    }
   }
 }
